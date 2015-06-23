@@ -273,7 +273,7 @@ input[type=button] {
   zoom: 1;
 }
 
-/* line 42, ../sass/_typography.scss */
+/* line 44, ../sass/_typography.scss */
 h1 {
   font-family: "ltc-broadway", sans-serif;
   font-size: 3em;
@@ -282,7 +282,7 @@ h1 {
   margin: 15px 0;
 }
 
-/* line 44, ../sass/_typography.scss */
+/* line 46, ../sass/_typography.scss */
 h2 {
   font-family: "ltc-broadway", sans-serif;
   font-size: 2em;
@@ -290,7 +290,7 @@ h2 {
   font-weight: 400;
 }
 
-/* line 46, ../sass/_typography.scss */
+/* line 48, ../sass/_typography.scss */
 h3 {
   font-family: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
   font-size: 1.125em;
@@ -299,25 +299,25 @@ h3 {
   text-transform: uppercase;
 }
 
-/* line 51, ../sass/_typography.scss */
+/* line 53, ../sass/_typography.scss */
 body {
   font-size: 16px;
   line-height: 1.2em;
   font-family: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
 }
 
-/* line 57, ../sass/_typography.scss */
+/* line 59, ../sass/_typography.scss */
 p {
   display: block;
   margin-bottom: 10px;
 }
 
-/* line 62, ../sass/_typography.scss */
+/* line 64, ../sass/_typography.scss */
 a {
   text-decoration: none;
 }
 
-/* line 66, ../sass/_typography.scss */
+/* line 68, ../sass/_typography.scss */
 small {
   font-size: 0.75em;
   line-height: 0.8em;
@@ -457,19 +457,19 @@ body {
   padding: 0;
 }
 
-/* line 45, ../sass/_base.scss */
+/* line 54, ../sass/_base.scss */
 .invisible {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* line 52, ../sass/_base.scss */
+/* line 61, ../sass/_base.scss */
 .focusable:active {
   position: static !important;
   clip: auto;
 }
-/* line 56, ../sass/_base.scss */
+/* line 65, ../sass/_base.scss */
 .focusable:focus {
   position: static !important;
   clip: auto;
@@ -494,27 +494,25 @@ html {
   margin: 0 auto;
 }
 /* line 18, ../sass/_page-globals.scss */
-#page header img.subpage {
-  margin: 0;
-}
-/* line 21, ../sass/_page-globals.scss */
 #page header h1 {
   display: none;
 }
-
-/* line 25, ../sass/_page-globals.scss */
-#site-navigation {
-  padding-bottom: 80px;
-  background-image: url("../img/star-divider.png");
-  background-position: center;
-  background-repeat: no-repeat;
+/* line 22, ../sass/_page-globals.scss */
+#page header.subpage img {
+  width: 60%;
+  max-width: 265px;
 }
-/* line 31, ../sass/_page-globals.scss */
+
+/* line 41, ../sass/_page-globals.scss */
+#site-navigation {
+  margin: 20px auto 0;
+}
+/* line 43, ../sass/_page-globals.scss */
 #site-navigation ul {
   display: block;
-  max-width: 612px;
+  max-width: 950px;
   width: 100%;
-  min-width: 312px;
+  min-width: 300px;
   margin: 0 auto;
   *zoom: 1;
 }
@@ -524,23 +522,182 @@ html {
   display: table;
   clear: both;
 }
-/* line 39, ../sass/_page-globals.scss */
+/* line 51, ../sass/_page-globals.scss */
 #site-navigation li {
-  float: left;
   display: block;
+  float: left;
 }
-/* line 42, ../sass/_page-globals.scss */
+/* line 54, ../sass/_page-globals.scss */
 #site-navigation li a {
   display: block;
-  font-family: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
-  font-size: 1.5em;
-  line-height: 1.2em;
-  font-weight: 700;
+  padding: 5px 15px;
+  font-family: "futura-pt", Futura, Trebuchet MS, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 1.8em;
+  line-height: 1.85em;
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0px #000000;
   text-transform: uppercase;
+  background-image: url("../img/nav-background.png");
+  margin-right: 5px;
+}
+/* line 69, ../sass/_page-globals.scss */
+#site-navigation li a:hover {
+  background-image: none;
   color: #cf2202;
-  padding: 10px;
+  text-shadow: 2px 2px 0px #96bfe9;
+}
+/* line 75, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(1) {
+  transform: skew(-0.25deg) rotate(0.25deg);
+  -webkit-transform: skew(-0.25deg) rotat(0.25deg);
+  -moz-transform: skew(-0.25deg) rotate(0.25deg);
+}
+/* line 77, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(1) a {
+  background-image: url("../img/red-nav-background.png");
+  background-position: top;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* line 81, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(1) a:hover {
+  background-image: none;
+  color: #123354;
+  text-shadow: 2px 2px 0px #febfb3;
+}
+/* line 88, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(2) {
+  transform: skew(0.15deg) rotate(-0.25deg);
+  -webkit-transform: skew(0.15deg) rotat(-0.25deg);
+  -moz-transform: skew(0.15deg) rotate(-0.25deg);
+}
+/* line 90, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(2) a {
+  background-position: bottom;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+/* line 95, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(3) {
+  transform: skew(-0.22deg) rotate(0.17deg);
+  -webkit-transform: skew(-0.22deg) rotat(0.17deg);
+  -moz-transform: skew(-0.22deg) rotate(0.17deg);
+}
+/* line 97, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(3) a {
+  background-position: right;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* line 102, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(4) {
+  transform: skew(0.11deg) rotate(-0.25deg);
+  -webkit-transform: skew(0.11deg) rotat(-0.25deg);
+  -moz-transform: skew(0.11deg) rotate(-0.25deg);
+}
+/* line 104, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(4) a {
+  background-position: left;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 109, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(5) {
+  transform: skew(-0.2deg) rotate(0.21deg);
+  -webkit-transform: skew(-0.2deg) rotat(0.21deg);
+  -moz-transform: skew(-0.2deg) rotate(0.21deg);
+}
+/* line 111, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(5) a {
+  background-position: center;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* line 116, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(6) {
+  transform: skew(0.18deg) rotate(-0.15deg);
+  -webkit-transform: skew(0.18deg) rotat(-0.15deg);
+  -moz-transform: skew(0.18deg) rotate(-0.15deg);
+}
+/* line 118, ../sass/_page-globals.scss */
+#site-navigation li:nth-child(6) a {
+  background-position: 35% 65%;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  margin-right: 0px;
 }
 
+@media (max-width: 480px) {
+  /* line 2, ../sass/_breakpoints.scss */
+  #site-navigation {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 /* -------------------------------------------------------------------------*/
 /* Layout */
 /* line 10, ../sass/front.scss */

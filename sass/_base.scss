@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// Imports
+// Sass/Compass/Major Imports
 
 @import "compass";
 @import "susy";
@@ -39,6 +39,15 @@ body {
 
 $red 	: #CF2202;
 $blue	: #123354;
+$gold	: #FFB700;
+
+// ---------------------------------------------------------------------------
+// BREAKPOINTS & TWEAKPOINTS
+
+$smartphone: 	0 12 480px;
+$small-tablet:	480 12 600px;
+$tablet:		600px 12 800px;
+$small-desktop: 800px 12 1024px;
 
 // ---------------------------------------------------------------------------
 // FOR SCREEN READERS
@@ -64,3 +73,5 @@ $blue	: #123354;
 
 @import "page-globals";
 @import "blog-page";
+
+@import "breakpoints";
