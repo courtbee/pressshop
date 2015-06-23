@@ -16,13 +16,18 @@ html {
 			margin: 0 auto;
 		}
 		img.subpage {
-
+			margin: 0;
 		}
 		h1 { display: none; }
 	}
 }
 
 #site-navigation {
+	//START HERE!!! :D :D
+	padding-bottom: 80px;
+	background-image: url('../img/star-divider.png');
+	background-position: center;
+	background-repeat: no-repeat;
 	ul {
 		display: block;
 		max-width: 612px;
@@ -37,7 +42,7 @@ html {
 		a {
 			display: block;
 			@include h3-style(1.5em);
-			color: #215ba6;
+			color: $red;
 			padding: 10px;
 		}
 	}

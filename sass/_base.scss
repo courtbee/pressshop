@@ -5,9 +5,6 @@
 @import "susy";
 @import "typography";
 @import "admin-headers";
-@import "page-globals";
-
-@import "blog-page";
 
 // ---------------------------------------------------------------------------
 // Basic Grid
@@ -38,6 +35,12 @@ body {
 }
 
 // ---------------------------------------------------------------------------
+// COLORS 
+
+$red 	: #CF2202;
+$blue	: #123354;
+
+// ---------------------------------------------------------------------------
 // FOR SCREEN READERS
 .invisible {
 	position: absolute !important;
@@ -55,3 +58,9 @@ body {
 		clip: auto;
 	}
 }
+
+// ---------------------------------------------------------------------------
+// SECTION SASSIN'
+
+@import "page-globals";
+@import "blog-page";

@@ -441,6 +441,40 @@ small {
   background-color: #f7f7f7;
 }
 
+/* line 24, ../sass/_base.scss */
+img {
+  width: 100%;
+}
+
+/* line 28, ../sass/_base.scss */
+textarea {
+  width: 100% !important;
+}
+
+/* line 32, ../sass/_base.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 45, ../sass/_base.scss */
+.invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* line 52, ../sass/_base.scss */
+.focusable:active {
+  position: static !important;
+  clip: auto;
+}
+/* line 56, ../sass/_base.scss */
+.focusable:focus {
+  position: static !important;
+  clip: auto;
+}
+
 /* line 1, ../sass/_page-globals.scss */
 html {
   height: 100%;
@@ -459,12 +493,23 @@ html {
   max-width: 531px;
   margin: 0 auto;
 }
+/* line 18, ../sass/_page-globals.scss */
+#page header img.subpage {
+  margin: 0;
+}
 /* line 21, ../sass/_page-globals.scss */
 #page header h1 {
   display: none;
 }
 
-/* line 26, ../sass/_page-globals.scss */
+/* line 25, ../sass/_page-globals.scss */
+#site-navigation {
+  padding-bottom: 80px;
+  background-image: url("../img/star-divider.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 31, ../sass/_page-globals.scss */
 #site-navigation ul {
   display: block;
   max-width: 612px;
@@ -479,12 +524,12 @@ html {
   display: table;
   clear: both;
 }
-/* line 34, ../sass/_page-globals.scss */
+/* line 39, ../sass/_page-globals.scss */
 #site-navigation li {
   float: left;
   display: block;
 }
-/* line 37, ../sass/_page-globals.scss */
+/* line 42, ../sass/_page-globals.scss */
 #site-navigation li a {
   display: block;
   font-family: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
@@ -492,42 +537,8 @@ html {
   line-height: 1.2em;
   font-weight: 700;
   text-transform: uppercase;
-  color: #215ba6;
+  color: #cf2202;
   padding: 10px;
-}
-
-/* line 27, ../sass/_base.scss */
-img {
-  width: 100%;
-}
-
-/* line 31, ../sass/_base.scss */
-textarea {
-  width: 100% !important;
-}
-
-/* line 35, ../sass/_base.scss */
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 42, ../sass/_base.scss */
-.invisible {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* line 49, ../sass/_base.scss */
-.focusable:active {
-  position: static !important;
-  clip: auto;
-}
-/* line 53, ../sass/_base.scss */
-.focusable:focus {
-  position: static !important;
-  clip: auto;
 }
 
 /* -------------------------------------------------------------------------*/
