@@ -1,0 +1,87 @@
+// ---------------------------------------------------------------------------
+// BASE SETTINGS
+
+$base-font-size: 16px;
+$base-line-height: 1.2em;
+
+// ---------------------------------------------------------------------------
+// FONT VARS
+
+$header-font	: "ltc-broadway", sans-serif;
+$body-font		: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+
+$normal	: 400;
+$demi	: 700;
+
+// ---------------------------------------------------------------------------
+// HEADERS
+
+@mixin h1-style ($size: 3em, $height: 1.5em) {
+	font-family: $header-font;
+	font-size: $size;
+	line-height: $height;
+	font-weight: $normal;
+	margin: 15px 0;
+}
+
+@mixin h2-style ($size: 2em, $height: 1.25em) {
+	font-family: $header-font;
+	font-size: $size;
+	line-height: $height;
+	font-weight: $normal;
+}
+
+@mixin h3-style ($size: 1.125em, $height: 1.2em) {
+	font-family: $body-font;
+	font-size: $size;
+	line-height: $height;
+	font-weight: $demi;
+	text-transform: uppercase;
+}
+
+h1 { @include h1-style; }
+
+h2 { @include h2-style; }
+
+h3 { @include h3-style; }
+
+// ---------------------------------------------------------------------------
+// STYLES
+
+body {
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	font-family: $body-font;
+}
+
+p {
+	display: block;
+	margin-bottom: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+small {
+	font-size: 0.75em;
+	line-height: 0.8em;
+}
+
+// ---------------------------------------------------------------------------
+// ICONS
+
+@font-face {
+	font-family: 'nerdery';
+	src: url('../icons/nerdery.eot?') format('eot'), url('../icons/nerdery.woff') format('woff'), url('../icons/nerdery.ttf') format('truetype'), url('../icons/nerdery.svg#nerdery') format('svg');
+}
+
+$home-icon	: "\e600";
+$img-icon	: "\e601";
+$imgs-icon	: "\e602";
+$shop-icon	: "\e603";
+$exit-icon	: "\e604";
+$arrow-up	: "\e605";
+$arrow-right: "\e606";
+$arrow-down	: "\e607";
+$arrow-left : "\e608";

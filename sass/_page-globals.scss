@@ -1,0 +1,44 @@
+html {
+	height: 100%;
+	background-image: url('../img/background.gif');
+}
+
+#page {
+	//@include susy-grid-background;
+	max-width: 1280px;
+	margin: 0 auto;
+
+	header {
+		img {
+			display: block;
+			width: 100%;
+			max-width: 531px;
+			margin: 0 auto;
+		}
+		img.subpage {
+
+		}
+		h1 { display: none; }
+	}
+}
+
+#site-navigation {
+	ul {
+		display: block;
+		max-width: 612px;
+		width: 100%;
+		min-width: 312px;
+		margin: 0 auto;
+		@include pie-clearfix;
+	}
+	li {
+		float: left;
+		display: block;
+		a {
+			display: block;
+			@include h3-style(1.5em);
+			color: #215ba6;
+			padding: 10px;
+		}
+	}
+}

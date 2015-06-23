@@ -1,0 +1,20 @@
+name = PressShop
+description = Super awesome theme for a super awesome business
+version = 1.0
+core = 7.x
+engine = phptemplate
+
+stylesheets[all][] = css/front.css
+
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[footer] = Footer
+
+regions[header_utility] = Header Utility/Toolbar
+regions[breadcrumbs] = Breadcrumbs
+regions[post_content] = Post Content
+regions[comment_section] = Comment Section

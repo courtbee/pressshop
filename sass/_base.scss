@@ -1,0 +1,57 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "compass";
+@import "susy";
+@import "typography";
+@import "admin-headers";
+@import "page-globals";
+
+@import "blog-page";
+
+// ---------------------------------------------------------------------------
+// Basic Grid
+
+$total-columns  : 12;
+$column-width   : 4em;
+$gutter-width   : 1em;
+$grid-padding   : 0em;
+
+$show-grid-backgrounds: true;
+$container-style: magic;
+$container-width: 100%;
+
+// ---------------------------------------------------------------------------
+// RESET && DEFAULTS
+
+img {
+	width: 100%;
+}
+
+textarea {
+	width: 100% !important;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+// ---------------------------------------------------------------------------
+// FOR SCREEN READERS
+.invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.focusable {
+	&:active {
+		position: static !important;
+		clip: auto;
+	}
+	&:focus {
+		position: static !important;
+		clip: auto;
+	}
+}

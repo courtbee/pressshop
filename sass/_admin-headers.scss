@@ -1,0 +1,83 @@
+/* Toolbar for Owners */
+#header-utility {
+	width: 100%;
+	background-color: #232224;
+	border-bottom: 1px solid #1A1A1A;
+	a {
+		display: block;
+		color: #FAFAFA;
+		padding: 15px;
+		&:before {
+			font-family: 'nerdery';
+			  speak: none;
+			  font-style: normal;
+			  font-weight: normal;
+			  font-variant: normal;
+			  text-transform: none;
+			  line-height: 1;
+			  -webkit-font-smoothing: antialiased;
+			  -moz-osx-font-smoothing: grayscale;
+			  font-size: 1em;
+		}
+		&:hover {
+			background-color: #1A1A1A;
+			color: #FFF;
+			text-decoration: none;
+		}
+	}
+	.home {
+		float: left;
+		border-right: 1px solid #1A1A1A;
+		span { display: none; }
+		&:before {
+			content: "\e600";
+			line-height: 1.1em;
+		}
+	}
+	.db {
+		float: left;
+		border-right: 1px solid #1A1A1A;
+		font-size: 14px;
+		font-family: arial, sans-serif;
+	}
+	.exit {
+		float: right;
+		border-left: 1px solid #1A1A1A;
+		span { display: none; }
+		&:before {
+			content: "\e604";
+			line-height: 1.1em;
+		}
+	}
+	@include pie-clearfix;
+}
+
+/* Tabs for Owners */
+.tabs {
+	.element-invisible { display: none; }
+	ul {
+		display: block;
+		background-color: lighten(#E9E8EA,3%);
+		border-bottom: 1px solid #D3D2D4;
+		li {
+			display: block;
+			float: left;
+		}
+		a {
+			display: block;
+			padding: 10px;
+			background-color: #E9E8EA;
+			border-right: 1px solid #D3D2D4;
+			&:hover {
+				background-color: shade(#E9E8EA,3%);
+			}	
+		}
+		.active {
+			background-color: #FFF;
+			&:hover {
+				background-color: shade(#FFFFFF,3%);
+			}
+		}
+		@include clearfix;
+	}
+}
