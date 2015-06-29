@@ -4,8 +4,7 @@ html {
 }
 
 #page {
-	@include container;
-	@include susy-grid-background;
+	//@include susy-grid-background;
 	max-width: 1280px;
 	margin: 0 auto;
 
@@ -40,11 +39,10 @@ html {
 }
 
 #site-navigation {
-	margin: 10px auto 20px;
+	margin: 20px auto 0;
 	ul {
 		display: block;
 		max-width: 873px;
-		//max-width: 919px;
 		width: 100%;
 		min-width: 300px;
 		margin: 0 auto;
@@ -75,12 +73,6 @@ html {
 				text-shadow: 2px 2px 0px lighten($blue,45%);
 			}
 		}
-		.active { 
-			background-image: none; 
-			color: #000000;
-			text-shadow: 2px 2px 0px lighten($ltblue,45%);
-			opacity: 0.85;
-		}
 		&:nth-child(1) {
 			@include nav-skew(-0.25deg, 0.25deg);
 			a {
@@ -102,14 +94,14 @@ html {
 			}
 		}
 		&:nth-child(3) {
-			@include nav-skew(-0.36deg, 0.22deg);
+			@include nav-skew(-0.22deg, 0.22deg);
 			a {
 				background-position: right;
 				@include randomize-borders(4px,3px,3px,2px);
 			}
 		}
 		&:nth-child(4) {
-			@include nav-skew(0.29deg, -0.25deg);
+			@include nav-skew(0.11deg, -0.25deg);
 			a {
 				background-position: left;
 				@include randomize-borders(2px,7px,4px,3px);
@@ -123,24 +115,12 @@ html {
 			}
 		}
 		&:nth-child(6) {
-			@include nav-skew(0.18deg, 0.30deg);
+			@include nav-skew(0.18deg, 0.15deg);
 			a {
 				background-position: 35% 65%;
-				@include randomize-borders(2px,5px,2px,3px);
+				@include randomize-borders(1px,5px,2px,3px);
 				margin-right: 0px;
 			}
 		}
 	}
-}
-
-.subpage {
-	#main {
-		width: columns(9,12);
-		float: left;
-	}
-	#section-menu {
-		width: columns(3,12);
-		float: right;
-	}
-	@include pie-clearfix;
 }

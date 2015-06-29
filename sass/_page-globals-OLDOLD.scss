@@ -1,0 +1,88 @@
+html {
+	height: 100%;
+	background-image: url('../img/background.gif');
+}
+
+#page {
+	//@include susy-grid-background;
+	max-width: 1280px;
+	margin: 0 auto;
+
+	header {
+		img {
+			display: block;
+			width: 100%;
+			max-width: 531px;
+			margin: 0 auto;
+		}
+		h1 { display: none; }
+	}
+
+	header.subpage {
+		img {
+			//width: 60%;
+			//max-width: 265px;
+		}
+	}
+}
+
+#site-navigation {
+	position: relative;
+	padding: 20px 0;
+	ul {
+		display: block;
+		margin: 0 auto;
+		@include pie-clearfix;
+		max-width: 823px;
+		width: 100%;
+		min-width: 300px;
+	}
+	li {
+		display: block;
+		float: left;
+		a {
+			display: block;
+			font-family: $menu-font;
+			text-align: center;
+			font-size: 1.8em;
+			line-height: 2em;
+			color: $blue;
+			text-shadow: 2px 2px 0px lighten($ltblue,30%);
+			opacity: 0.75;
+			font-weight: $xt-bold;
+			margin-right: 15px;
+			padding: 10px;
+			letter-spacing: 0.5px;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		&:last-child a {
+			margin-right: 0px;
+		}
+		&:nth-child(1) a {
+			color: $red;
+			text-shadow: 2px 2px 0px lighten($ltblue,30%);
+		}
+	}
+	&:before {
+		display: block;
+		content: "";
+		height: 12px;
+		position: absolute;
+		top: 0;
+		right: 17%;
+		left: 17%;
+		background-image: url('../img/star-divider2.png');
+	}
+	&:after {
+		display: block;
+		content: "";
+		height: 12px;
+		position: absolute;
+		bottom: 0;
+		right: 17%;
+		left: 17%;
+		background-image: url('../img/star-divider2.png');
+	}
+}

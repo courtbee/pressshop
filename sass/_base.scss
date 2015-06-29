@@ -12,7 +12,7 @@
 $total-columns  : 12;
 $column-width   : 4em;
 $gutter-width   : 1em;
-$grid-padding   : 0em;
+$grid-padding   : 1em;
 
 $show-grid-backgrounds: true;
 $container-style: magic;
@@ -37,9 +37,13 @@ body {
 // ---------------------------------------------------------------------------
 // COLORS 
 
-$red 	: #CF2202;
-$blue	: #123354;
-$gold	: #FFB700;
+//$red 	: #CE170A; //ce170a //CF2202
+//$blue	: #123354;
+//$gold	: #FFB700;
+
+$red 	: #B71100;
+$ltblue	: #5589C3;
+$blue	: #1C3D5C;
 
 // ---------------------------------------------------------------------------
 // BREAKPOINTS & TWEAKPOINTS

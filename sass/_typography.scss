@@ -7,9 +7,11 @@ $base-line-height: 1.2em;
 // ---------------------------------------------------------------------------
 // FONT VARS
 
-$header-font	: "ltc-broadway", sans-serif;
+$header-font	: "cooper-black-std", sans-serif; /*"ltc-broadway", sans-serif;*/
 $body-font		: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
-$menu-font		: "futura-pt", Futura, Trebuchet MS, Arial, sans-serif;
+//$menu-font		: "cooper-black-std", sans-serif;
+$menu-font		: "futura-pt", sans-serif;
+
 
 $normal	: 400;
 $demi	: 700;
