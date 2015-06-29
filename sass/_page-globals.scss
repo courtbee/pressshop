@@ -57,9 +57,9 @@ html {
 			display: block;
 			padding: 5px 15px;
 			font-family: $menu-font;
-			font-weight: $xt-bold;
-			font-size: 1.5em;
-			line-height: 1.55em;
+			font-weight: $normal;
+			font-size: 1.75em;
+			line-height: 1.75em;
 			display: block;
 			color: #FFFFFF;
 			text-align: center;
@@ -75,7 +75,7 @@ html {
 				text-shadow: 2px 2px 0px lighten($blue,45%);
 			}
 		}
-		.active { 
+		.active-trail { 
 			background-image: none; 
 			color: #000000;
 			text-shadow: 2px 2px 0px lighten($ltblue,45%);
@@ -134,13 +134,5 @@ html {
 }
 
 .subpage {
-	#main {
-		width: columns(9,12);
-		float: left;
-	}
-	#section-menu {
-		width: columns(3,12);
-		float: right;
-	}
-	@include pie-clearfix;
+
 }

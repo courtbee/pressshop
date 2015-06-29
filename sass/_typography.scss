@@ -2,52 +2,58 @@
 // BASE SETTINGS
 
 $base-font-size: 16px;
-$base-line-height: 1.2em;
+$base-line-height: 1.25em;
 
 // ---------------------------------------------------------------------------
 // FONT VARS
 
-$header-font	: "cooper-black-std", sans-serif; /*"ltc-broadway", sans-serif;*/
+$header-font	: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
 $body-font		: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
-//$menu-font		: "cooper-black-std", sans-serif;
-$menu-font		: "futura-pt", sans-serif;
-
+$menu-font		: "cubano-sharp", Arial, sans-serif;
 
 $normal	: 400;
 $demi	: 700;
-$xt-bold: 800;
+$heavy: 900;
 
 // ---------------------------------------------------------------------------
 // HEADERS
 
-@mixin h1-style ($size: 3em, $height: 1.5em) {
+@mixin h1-style($size,$height) {
 	font-family: $header-font;
 	font-size: $size;
 	line-height: $height;
-	font-weight: $normal;
-	margin: 15px 0;
+	font-weight: $demi;
 }
-
-@mixin h2-style ($size: 2em, $height: 1.25em) {
+@mixin h2-style($size,$height) {
 	font-family: $header-font;
 	font-size: $size;
 	line-height: $height;
-	font-weight: $normal;
+	font-weight: $demi;
 }
-
-@mixin h3-style ($size: 1.125em, $height: 1.2em) {
+@mixin h3-style($size,$height) {
 	font-family: $body-font;
 	font-size: $size;
 	line-height: $height;
 	font-weight: $demi;
-	text-transform: uppercase;
+	font-style: italic;
 }
 
-h1 { @include h1-style; }
+@include at-breakpoint($small) {
 
-h2 { @include h2-style; }
+}
+@include at-breakpoint($medium) {
+	
+}
+@include at-breakpoint($normal) {
+	
+}
+@include at-breakpoint($large) {
+	h1 { @include h1-style(3em,1.25em); }
+}
+@include at-breakpoint($oversize) {
+	h1 { @include h1-style(3em,1.25em); }
+}
 
-h3 { @include h3-style; }
 
 // ---------------------------------------------------------------------------
 // STYLES

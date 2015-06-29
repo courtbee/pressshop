@@ -273,52 +273,77 @@ input[type=button] {
   zoom: 1;
 }
 
-/*"ltc-broadway", sans-serif;*/
-/* line 46, ../sass/_typography.scss */
-h1 {
-  font-family: "cooper-black-std", sans-serif;
-  font-size: 3em;
-  line-height: 1.5em;
-  font-weight: 400;
-  margin: 15px 0;
+/* line 22, ../sass/_base.scss */
+img {
+  width: 100%;
 }
 
-/* line 48, ../sass/_typography.scss */
-h2 {
-  font-family: "cooper-black-std", sans-serif;
-  font-size: 2em;
-  line-height: 1.25em;
-  font-weight: 400;
+/* line 26, ../sass/_base.scss */
+textarea {
+  width: 100% !important;
 }
 
-/* line 50, ../sass/_typography.scss */
-h3 {
-  font-family: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
-  font-size: 1.125em;
-  line-height: 1.2em;
-  font-weight: 700;
-  text-transform: uppercase;
+/* line 30, ../sass/_base.scss */
+body {
+  margin: 0;
+  padding: 0;
 }
 
-/* line 55, ../sass/_typography.scss */
+/* line 57, ../sass/_base.scss */
+.invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* line 64, ../sass/_base.scss */
+.focusable:active {
+  position: static !important;
+  clip: auto;
+}
+/* line 68, ../sass/_base.scss */
+.focusable:focus {
+  position: static !important;
+  clip: auto;
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  /* line 51, ../sass/_typography.scss */
+  h1 {
+    font-family: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+    font-size: 3em;
+    line-height: 1.25em;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 54, ../sass/_typography.scss */
+  h1 {
+    font-family: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+    font-size: 3em;
+    line-height: 1.25em;
+    font-weight: 700;
+  }
+}
+/* line 61, ../sass/_typography.scss */
 body {
   font-size: 16px;
-  line-height: 1.2em;
+  line-height: 1.25em;
   font-family: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
 }
 
-/* line 61, ../sass/_typography.scss */
+/* line 67, ../sass/_typography.scss */
 p {
   display: block;
   margin-bottom: 10px;
 }
 
-/* line 66, ../sass/_typography.scss */
+/* line 72, ../sass/_typography.scss */
 a {
   text-decoration: none;
 }
 
-/* line 70, ../sass/_typography.scss */
+/* line 76, ../sass/_typography.scss */
 small {
   font-size: 0.75em;
   line-height: 0.8em;
@@ -442,40 +467,6 @@ small {
   background-color: #f7f7f7;
 }
 
-/* line 24, ../sass/_base.scss */
-img {
-  width: 100%;
-}
-
-/* line 28, ../sass/_base.scss */
-textarea {
-  width: 100% !important;
-}
-
-/* line 32, ../sass/_base.scss */
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 58, ../sass/_base.scss */
-.invisible {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* line 65, ../sass/_base.scss */
-.focusable:active {
-  position: static !important;
-  clip: auto;
-}
-/* line 69, ../sass/_base.scss */
-.focusable:focus {
-  position: static !important;
-  clip: auto;
-}
-
 /* line 1, ../sass/_page-globals.scss */
 html {
   height: 100%;
@@ -554,10 +545,10 @@ html {
 #site-navigation li a {
   display: block;
   padding: 5px 15px;
-  font-family: "futura-pt", sans-serif;
-  font-weight: 800;
-  font-size: 1.5em;
-  line-height: 1.55em;
+  font-family: "cubano-sharp", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.75em;
+  line-height: 1.75em;
   display: block;
   color: #FFFFFF;
   text-align: center;
@@ -575,7 +566,7 @@ html {
   text-shadow: 2px 2px 0px #84b0da;
 }
 /* line 78, ../sass/_page-globals.scss */
-#site-navigation li .active {
+#site-navigation li .active-trail {
   background-image: none;
   color: #000000;
   text-shadow: 2px 2px 0px white;
@@ -722,87 +713,6 @@ html {
   margin-right: 0px;
 }
 
-/* line 136, ../sass/_page-globals.scss */
-.subpage {
-  *zoom: 1;
-}
-/* line 137, ../sass/_page-globals.scss */
-.subpage #main {
-  width: 74.57627%;
-  float: left;
-}
-/* line 141, ../sass/_page-globals.scss */
-.subpage #section-menu {
-  width: 23.72881%;
-  float: right;
-}
-/* line 38, ../../../../../../../Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.subpage:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-@media (max-width: 480px) {
-  /* line 2, ../sass/_breakpoints.scss */
-  #site-navigation {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  /* line 7, ../sass/_breakpoints.scss */
-  .subpage #main {
-    width: 100%;
-    float: none;
-  }
-  /* line 11, ../sass/_breakpoints.scss */
-  .subpage #section-menu {
-    width: 100%;
-    float: none;
-  }
-  /* line 38, ../../../../../../../Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  .subpage:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-@media (max-width: 600px) {
-  /* line 24, ../sass/_breakpoints.scss */
-  .subpage #main {
-    width: 100%;
-    float: none;
-  }
-  /* line 28, ../sass/_breakpoints.scss */
-  .subpage #section-menu {
-    width: 100%;
-    float: none;
-  }
-  /* line 38, ../../../../../../../Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  .subpage:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-@media (min-width: 600px) and (max-width: 800px) {
-  /* line 41, ../sass/_breakpoints.scss */
-  .subpage #main {
-    width: 100%;
-    float: none;
-  }
-  /* line 45, ../sass/_breakpoints.scss */
-  .subpage #section-menu {
-    width: 100%;
-    float: none;
-  }
-  /* line 38, ../../../../../../../Desktop/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  .subpage:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
 /* -------------------------------------------------------------------------*/
 /* Layout */
 /* line 10, ../sass/front.scss */

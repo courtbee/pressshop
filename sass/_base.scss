@@ -3,8 +3,6 @@
 
 @import "compass";
 @import "susy";
-@import "typography";
-@import "admin-headers";
 
 // ---------------------------------------------------------------------------
 // Basic Grid
@@ -48,10 +46,11 @@ $blue	: #1C3D5C;
 // ---------------------------------------------------------------------------
 // BREAKPOINTS & TWEAKPOINTS
 
-$smartphone: 	0 12 480px;
-$small-tablet:	480 12 600px;
-$tablet:		600px 12 800px;
-$small-desktop: 800px 12 1024px;
+$small		: 0px 12 480px;
+$medium		: 480px 12 960px;
+$normal		: 960px 12 1024px;
+$large		: 1024px 12 1280px;
+$oversize	: 1280px 12;
 
 // ---------------------------------------------------------------------------
 // FOR SCREEN READERS
@@ -75,7 +74,9 @@ $small-desktop: 800px 12 1024px;
 // ---------------------------------------------------------------------------
 // SECTION SASSIN'
 
+@import "typography";
+@import "admin-headers";
 @import "page-globals";
-@import "blog-page";
 
+@import "blog-page";
 @import "breakpoints";
