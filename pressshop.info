@@ -18,3 +18,4 @@ regions[header_utility] = Header Utility/Toolbar
 regions[breadcrumbs] = Breadcrumbs
 regions[post_content] = Post Content
 regions[comment_section] = Comment Section
+regions[portfolio_term_roundup] = Portfolio Terms

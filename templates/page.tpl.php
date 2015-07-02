@@ -45,6 +45,12 @@
 		<?php endif; ?>
 	</div>
 
+	<?php if($page['portfolio_term_roundup']): ?>
+	<div id="portfolio-terms">
+		<?php print render($page['portfolio_term_roundup']); ?>
+	</div>
+	<?php endif; ?>
+
 	<?php if ($page['comment_section']): ?>
 	<div id="comments">
 		<?php print render($page['comment_section']); ?>
