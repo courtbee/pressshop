@@ -9,7 +9,7 @@
 
 <div id="page">
 	<?php if ($page['header']): ?>
-	<header>
+	<header <?php if (!$is_front): ?>class="subpage"><?php endif; ?>>
 		<?php print render($page['header']); ?>
 	</header>
 	<?php endif; ?>

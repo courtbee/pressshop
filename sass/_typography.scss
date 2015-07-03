@@ -22,7 +22,7 @@ $heavy: 900;
 	font-family: $header-font;
 	font-size: $size;
 	line-height: $height;
-	font-weight: $demi;
+	font-weight: $heavy;
 }
 @mixin h2-style($size,$height) {
 	font-family: $header-font;
@@ -49,9 +49,11 @@ $heavy: 900;
 }
 @include at-breakpoint($large) {
 	h1 { @include h1-style(3em,1.25em); }
+	h2 { @include h2-style(2.25em,1.25em); }
 }
 @include at-breakpoint($oversize) {
 	h1 { @include h1-style(3em,1.25em); }
+	h2 { @include h2-style(2.25em,1.25em); }
 }
 
 
