@@ -17,7 +17,7 @@ html {
 
 #page {
 	@include container;
-	@include susy-grid-background;
+	//@include susy-grid-background;
 	max-width: 1280px;
 	margin: 0 auto;
 
@@ -30,6 +30,8 @@ html {
 		}
 		h1 { display: none; }
 	}
+
+	@include pie-clearfix;
 }
 
 #site-navigation {
@@ -138,6 +140,8 @@ html {
 			display: block;
 			ul.menu {
 				text-align: center;
+				max-width: unset;
+				min-width: unset;
 			}
 			li {
 				display: inline-block;
@@ -212,7 +216,7 @@ html {
 		#logo {
 			display: inline-block;
 			vertical-align: middle;
-			width: columns(5,12);
+			width: columns(4,12);
 			img {
 				max-width: 300px;
 			}
@@ -221,19 +225,88 @@ html {
 			display: inline-block;
 			vertical-align: middle;
 			margin: 0;
-			width: columns(7,12);
+			width: columns(8,12);
 			ul.menu {
 				max-width: unset;
 				width: auto;
 				min-width: unset;
 				display: inline-block;
+				text-align: center;
 			}
 			li {
 				margin-bottom: 10px;
+				display: inline-block;
+				float: none;
 				a {
 					font-size: 1.3em;
 					line-height: 1.3em;
 				}
+			}
+		}
+	}
+}
+@include at-breakpoint($large) {
+	#page header.subpage {
+		#logo {
+			display: inline-block;
+			vertical-align: middle;
+			width: columns(4,12);
+			img {
+				max-width: 400px;
+			}
+		}
+		#site-navigation {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0;
+			width: columns(8,12);
+			margin-left: $gutter-width;
+			ul.menu {
+				max-width: unset;
+				width: auto;
+				min-width: unset;
+				display: inline-block;
+				text-align: center;
+			}
+			li {
+				margin-bottom: 10px;
+				display: inline-block;
+				float: none;
+				a {
+					font-size: 1.4em;
+					line-height: 1.4em;
+				}
+			}
+		}
+	}
+}
+@include at-breakpoint($oversize) {
+	#page header.subpage {
+		#logo {
+			display: inline-block;
+			vertical-align: middle;
+			width: columns(4,12);
+			img {
+				max-width: 400px;
+			}
+		}
+		#site-navigation {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0;
+			width: columns(8,12);
+			margin-left: $gutter-width;
+			ul.menu {
+				max-width: unset;
+				width: auto;
+				min-width: unset;
+				display: inline-block;
+				text-align: center;
+			}
+			li {
+				margin-bottom: 10px;
+				display: inline-block;
+				float: none;
 			}
 		}
 	}

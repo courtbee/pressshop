@@ -7,9 +7,9 @@
 <?php endif; ?>
 <?php endif; ?>
 
-<div id="page">
+<div id="page" class="<?php print $sectionName; ?>">
 	<?php if ($page['header']): ?>
-	<header <?php if (!$is_front): ?>class="subpage"><?php endif; ?>>
+	<header <?php if (!$is_front): ?>class="subpage"<?php endif; ?>>
 		<?php print render($page['header']); ?>
 	</header>
 	<?php endif; ?>

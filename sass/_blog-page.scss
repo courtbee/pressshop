@@ -1,9 +1,35 @@
-.field-blog-featured-img {
-//	position: absolute;
-//	top: 0;
-//	left: 0;
-//	right: 0;
-//	margin: auto;
-//	z-index: -100;
-//	max-width: 1280px;
+@include at-breakpoint($small) {
+	
+}
+@include at-breakpoint($medium) {
+	
+}
+@include at-breakpoint($norm) {
+	
+}
+@include at-breakpoint($large) {
+	.blog {
+		#main {
+			width: columns(9,12);
+			margin-right: $gutter-width;
+			float: left;
+		}
+		#section-menu {
+			width: columns(3,12);
+			float: right;
+			background-color: pink;
+			a.dropdown-toggle {
+				cursor: default;
+				color: $fakeblack;
+				@include h3-style(1.75em,1.25em);
+				text-transform: uppercase;
+			}
+			ul.dropdown {
+
+			}
+		}
+	}
+}
+@include at-breakpoint($oversize) {
+
 }

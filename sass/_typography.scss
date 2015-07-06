@@ -22,39 +22,45 @@ $heavy: 900;
 	font-family: $header-font;
 	font-size: $size;
 	line-height: $height;
-	font-weight: $heavy;
 }
 @mixin h2-style($size,$height) {
 	font-family: $header-font;
 	font-size: $size;
 	line-height: $height;
-	font-weight: $demi;
 }
 @mixin h3-style($size,$height) {
 	font-family: $body-font;
 	font-size: $size;
 	line-height: $height;
-	font-weight: $demi;
-	font-style: italic;
 }
 
 @include at-breakpoint($small) {
-
+	h1 { @include h1-style(2em,1.25em); }
+	h2 { @include h2-style(1.625em,1.15384615em); }
+	h3 { @include h3-style(1.375em,	1.13636364em); }
 }
 @include at-breakpoint($medium) {
-	
+	h1 { @include h1-style(2em,1.25em); }
+	h2 { @include h2-style(1.625em,1.15384615em); }
+	h3 { @include h3-style(1.375em,1.13636364em); }	
 }
-@include at-breakpoint($normal) {
-	
+@include at-breakpoint($norm) {
+	h1 { @include h1-style(2.5em,1.125em); }
+	h2 { @include h2-style(2em,1.25em); }
+	h3 { @include h3-style(1.5em,1.25em); }	
 }
 @include at-breakpoint($large) {
-	h1 { @include h1-style(3em,1.25em); }
+	h1 { @include h1-style(3em,1.05em); }
 	h2 { @include h2-style(2.25em,1.25em); }
+	h3 { @include h3-style(1.75em,1.25em); }	
 }
 @include at-breakpoint($oversize) {
-	h1 { @include h1-style(3em,1.25em); }
+	h1 { @include h1-style(3em,1.05em); }
 	h2 { @include h2-style(2.25em,1.25em); }
+	h3 { @include h3-style(1.75em,1.25em); }	
 }
+
+h4 { font-weight: bold; text-transform: uppercase; }
 
 
 // ---------------------------------------------------------------------------
@@ -64,6 +70,7 @@ body {
 	font-size: $base-font-size;
 	line-height: $base-line-height;
 	font-family: $body-font;
+	color: $fakeblack;
 }
 
 p {

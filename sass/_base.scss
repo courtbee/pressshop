@@ -43,6 +43,8 @@ $red 	: #B71100;
 $ltblue	: #5589C3;
 $blue	: #1C3D5C;
 
+$fakeblack : #231F20;
+
 // ---------------------------------------------------------------------------
 // BREAKPOINTS & TWEAKPOINTS
 
@@ -79,4 +81,5 @@ $oversize	: 1280px 12;
 @import "page-globals";
 
 @import "blog-page";
+
 @import "breakpoints";
