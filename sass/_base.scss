@@ -74,6 +74,55 @@ $oversize	: 1280px 12;
 }
 
 // ---------------------------------------------------------------------------
+// FADE IN FROM EMBER THEME (DRUPAL)
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: .3s;
+  -moz-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+// ---------------------------------------------------------------------------
 // SECTION SASSIN'
 
 @import "typography";
