@@ -1,4 +1,6 @@
-<?php if ($block->subject): ?>
-<a class="dropdown-toggle" href="#" title="<?php print $block->subject; ?>"><?php print $block->subject; ?></a>
-<?php endif; ?>
-<?php print $content; ?>
+<div id="blog-tags">
+	<?php if ($block->subject): ?>
+	<h3><?php print $block->subject; ?></h3>
+	<?php print $content; ?>
+	<?php endif; ?>
+</div>

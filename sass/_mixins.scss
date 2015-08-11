@@ -1,0 +1,16 @@
+// ---------------------------------------------------------------------------
+// HELPER FUNCTION FOR DECLARING UNEVEN BORDER RADIUS
+@mixin randomize-borders($topR,$topL,$bottomR,$bottomL) {
+  @include border-top-right-radius($topR);
+  @include border-top-left-radius($topL);
+  @include border-bottom-left-radius($bottomL);
+  @include border-bottom-right-radius($bottomR);
+}
+
+// ---------------------------------------------------------------------------
+// HELPER FUNCTION FOR SKEWING + ROTATING ITEM
+@mixin nav-skew($skew,$rotate) {
+  transform: skew($skew) rotate($rotate);
+  -webkit-transform: skew($skew) rotat($rotate);
+  -moz-transform: skew($skew) rotate($rotate);
+}

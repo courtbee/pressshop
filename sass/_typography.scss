@@ -7,9 +7,9 @@ $base-line-height: 1.25em;
 // ---------------------------------------------------------------------------
 // FONT VARS
 
-$header-font	: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+$header-font	: "cubano-sharp", Arial, sans-serif;
 $body-font		: "franklin-gothic-urw", Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
-$menu-font		: "cubano-sharp", Arial, sans-serif;
+$script			: "brush-script-std", script;
 
 $normal	: 400;
 $demi	: 700;
@@ -29,7 +29,7 @@ $heavy: 900;
 	line-height: $height;
 }
 @mixin h3-style($size,$height) {
-	font-family: $body-font;
+	font-family: $header-font;
 	font-size: $size;
 	line-height: $height;
 }

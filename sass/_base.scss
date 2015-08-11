@@ -3,6 +3,7 @@
 
 @import "compass";
 @import "susy";
+@import "mixins";
 
 // ---------------------------------------------------------------------------
 // Basic Grid
@@ -10,7 +11,7 @@
 $total-columns  : 12;
 $column-width   : 4em;
 $gutter-width   : 1em;
-$grid-padding   : 1em;
+$grid-padding   : 0;
 
 $show-grid-backgrounds: true;
 $container-style: magic;
@@ -32,16 +33,17 @@ body {
 	padding: 0;
 }
 
+.element-invisible { display: none; }
+
 // ---------------------------------------------------------------------------
 // COLORS 
 
-//$red 	: #CE170A; //ce170a //CF2202
-//$blue	: #123354;
-//$gold	: #FFB700;
-
-$red 	: #B71100;
-$ltblue	: #5589C3;
-$blue	: #1C3D5C;
+$red       : #97080E;
+$orange    : #EE6D0C;
+$gold      : #FDC938;
+$green     : #488C13;
+$blue      : #3443A6;
+$purple    : #69245C;
 
 $fakeblack : #231F20;
 
@@ -50,7 +52,7 @@ $fakeblack : #231F20;
 
 $small		: 0px 12 650px;
 $medium		: 650px 12 960px;
-$norm		: 960px 12 1024px;
+$norm		  : 960px 12 1024px;
 $large		: 1024px 12 1280px;
 $oversize	: 1280px 12;
 
@@ -129,6 +131,35 @@ $oversize	: 1280px 12;
 @import "admin-headers";
 @import "page-globals";
 
-@import "blog-page";
 
-@import "breakpoints";
+// REMOVE WHEN DONE THEMING
+/*@include at-breakpoint($small) {
+  html:before {
+    display: block;
+    content: "small";
+  }
+}
+@include at-breakpoint($medium) {
+  html:before {
+    display: block;
+    content: "medium";
+  }
+}
+@include at-breakpoint($norm) {
+  html:before {
+    display: block;
+    content: "normal";
+  }
+}
+@include at-breakpoint($large) {
+  html:before {
+    display: block;
+    content: "large";
+  }
+}
+@include at-breakpoint($oversize) {
+  html:before {
+    display: block;
+    content: "oversize";
+  }
+}*/

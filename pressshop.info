@@ -6,16 +6,20 @@ engine = phptemplate
 
 stylesheets[all][] = css/front.css
 
-regions[header] = Header
+; CORE REGIONS - REQUIRED
+regions[page_top] = Page Top
+regions[content] = Content
+regions[page_bottom] = Page Bottom
+
+; CORE REGIONS - DEFAULT
+regions[sidebar_first] = Left Column
+regions[sidebar_second] = Right Column
+regions[footer] = Footer
 regions[highlighted] = Highlighted
 regions[help] = Help
-regions[content] = Content
-regions[sidebar_first] = Left sidebar
-regions[sidebar_second] = Right sidebar
-regions[footer] = Footer
 
+; CUSTOM REGIONS - CONTENT
 regions[header_utility] = Header Utility/Toolbar
-regions[breadcrumbs] = Breadcrumbs
-regions[post_content] = Post Content
+regions[content_footer] = Content Footer
 regions[comment_section] = Comment Section
-regions[portfolio_term_roundup] = Portfolio Terms
+regions[breadcrumbs] = Breadcrumbs
