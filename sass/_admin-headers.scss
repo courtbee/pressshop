@@ -3,6 +3,11 @@
 	width: 100%;
 	background-color: #232224;
 	border-bottom: 1px solid #1A1A1A;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 500;
 	a {
 		display: block;
 		color: #FAFAFA;
@@ -30,7 +35,7 @@
 		border-right: 1px solid #1A1A1A;
 		span { display: none; }
 		&:before {
-			content: "\e600";
+			content: $home-icon;
 			line-height: 1.1em;
 		}
 	}
@@ -45,7 +50,7 @@
 		border-left: 1px solid #1A1A1A;
 		span { display: none; }
 		&:before {
-			content: "\e604";
+			content: $exit-icon;
 			line-height: 1.1em;
 		}
 	}
@@ -55,6 +60,11 @@
 /* Tabs for Owners */
 .tabs {
 	.element-invisible { display: none; }
+	position: fixed;
+	top: 51px;
+	left: 0;
+	right: 0;
+	z-index: 500;
 	ul {
 		display: block;
 		background-color: lighten(#E9E8EA,3%);
@@ -79,5 +89,76 @@
 			}
 		}
 		@include clearfix;
+	}
+}
+
+@include at-breakpoint($small) {
+	.owner-auth #left {
+		margin-top: 51px;
+	}
+	.owner-auth #main {
+		margin-top: 51px;
+	}
+	.owner-auth .tabs-true #left {
+		margin-top: 92px;
+	}
+	.owner-auth .tabs-true #main {
+		margin-top: 92px;
+	}
+}
+@include at-breakpoint($medium) {
+	.owner-auth #left {
+		margin-top: 51px;
+	}
+	.owner-auth #main {
+		margin-top: 51px;
+	}
+	.owner-auth .tabs-true #left {
+		margin-top: 92px;
+	}
+	.owner-auth .tabs-true #main {
+		margin-top: 92px;
+	}
+}
+@include at-breakpoint($norm) {
+	.owner-auth #left {
+		top: 51px;
+	}
+	.owner-auth #main {
+		margin-top: 51px;
+	}
+	.owner-auth .tabs-true #left {
+		top: 92px;
+	}
+	.owner-auth .tabs-true #main {
+		margin-top: 92px;
+	}
+}
+@include at-breakpoint($large) {
+	.owner-auth #left {
+		top: 51px;
+	}
+	.owner-auth #main {
+		margin-top: 51px;
+	}
+	.owner-auth .tabs-true #left {
+		top: 92px;
+	}
+	.owner-auth .tabs-true #main {
+		margin-top: 92px;
+	}
+}
+@include at-breakpoint($oversize) {
+	.owner-auth #left {
+		top: 51px;
+	}
+	.owner-auth #main {
+		margin-top: 51px;
+	}
+	.owner-auth .tabs-true #left {
+		top: 92px;
+	}
+	.owner-auth .tabs-true #main {
+		margin-top: 92px;
 	}
 }

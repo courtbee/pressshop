@@ -3,15 +3,29 @@ html {
 	background-image: url('../img/background.gif');
 }
 
+body {
+	height: 100%;
+	min-height: 100%;
+}
+
 #page {
 	@include container;
 	@include susy-grid-background;
 	@include pie-clearfix;
 	position: relative;
+	height: 100%;
+	min-height: 100%;
+	width: 100%;
+}
+
+#main {
+
 }
 
 #left {
+	opacity: 0.8;
 	background-color: pink;
+	@include susy-grid-background;
 }
 
 #branding {
@@ -21,20 +35,70 @@ html {
 	h1 { display: none; }
 }
 
+#site-navigation {
+	a {
+		display: block;
+		padding: 10px 15px;
+		font-family: $body-font;
+		font-weight: $demi;
+		color: #FFF;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	li {
+		background-color: green;
+	}
+	li:nth-child(1) {
+		display: block;
+		width: columns(8,12);
+		margin: 0 auto 20px;
+		a {
+			font-size: 1.5em;
+			line-height: 1.5em;
+		}
+	}
+	li:nth-child(n+2) {
+		display: inline-block;
+		a {
+			font-size: 1.2em;
+			line-height: 1.2em;
+		}
+	}
+}
+
 footer {
 	display: block;
+	text-align: center;
 }
 
 @include at-breakpoint($small) {
+	//#left {
+	//	width: columns(12,12);
+	//}
+	//#branding {
+	//	img {
+	//		width: 100%;
+	//		max-width: 400px;
+	//		margin: 0 auto;
+	//	}
+	//}
 	#left {
-		width: columns(12,12);
+		width: columns(2,12);
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		z-index: 10;
 	}
 	#branding {
-		img {
-			width: 100%;
-			max-width: 400px;
-			margin: 0 auto;
-		}
+		img { display: none; }
+	}
+	#main {
+		width: columns(10,12);
+		@include push(2);
+	}
+	footer {
+		width: columns(10,12);
+		@include push(2);
 	}
 }
 @include at-breakpoint($medium) {
@@ -74,8 +138,7 @@ footer {
 		left: 0;
 		width: columns(3.5,12);
 		padding: 10px;
-		height: 100px;
-		background-color: green;
+		height: auto;
 		z-index: 20;
 	}
 }
@@ -104,8 +167,7 @@ footer {
 		left: 0;
 		width: columns(3.5,12);
 		padding: 10px;
-		height: 100px;
-		background-color: green;
+		height: auto;
 		z-index: 20;
 	}
 }
@@ -134,8 +196,7 @@ footer {
 		left: 0;
 		width: columns(3.5,12);
 		padding: 10px;
-		height: 100px;
-		background-color: green;
+		height: auto;
 		z-index: 20;
 	}
 }
