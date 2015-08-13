@@ -14,15 +14,15 @@
 		padding: 15px;
 		&:before {
 			font-family: 'nerdery';
-			  speak: none;
-			  font-style: normal;
-			  font-weight: normal;
-			  font-variant: normal;
-			  text-transform: none;
-			  line-height: 1;
-			  -webkit-font-smoothing: antialiased;
-			  -moz-osx-font-smoothing: grayscale;
-			  font-size: 1em;
+		  speak: none;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-variant: normal;
+		  text-transform: none;
+		  line-height: 1;
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		  font-size: 1em;
 		}
 		&:hover {
 			background-color: #1A1A1A;
@@ -94,13 +94,13 @@
 
 @include at-breakpoint($small) {
 	.owner-auth #left {
-		margin-top: 51px;
+		top: 51px;
 	}
 	.owner-auth #main {
 		margin-top: 51px;
 	}
 	.owner-auth .tabs-true #left {
-		margin-top: 92px;
+		top: 92px;
 	}
 	.owner-auth .tabs-true #main {
 		margin-top: 92px;

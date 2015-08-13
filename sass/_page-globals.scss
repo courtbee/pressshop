@@ -10,7 +10,7 @@ body {
 
 #page {
 	@include container;
-	@include susy-grid-background;
+	//@include susy-grid-background;
 	@include pie-clearfix;
 	position: relative;
 	height: 100%;
@@ -24,8 +24,7 @@ body {
 
 #left {
 	opacity: 0.8;
-	background-color: pink;
-	@include susy-grid-background;
+	//@include susy-grid-background;
 }
 
 #branding {
@@ -36,32 +35,14 @@ body {
 }
 
 #site-navigation {
-	a {
-		display: block;
-		padding: 10px 15px;
-		font-family: $body-font;
-		font-weight: $demi;
-		color: #FFF;
-		text-align: center;
-		text-transform: uppercase;
-	}
 	li {
-		background-color: green;
-	}
-	li:nth-child(1) {
-		display: block;
-		width: columns(8,12);
-		margin: 0 auto 20px;
 		a {
-			font-size: 1.5em;
-			line-height: 1.5em;
-		}
-	}
-	li:nth-child(n+2) {
-		display: inline-block;
-		a {
-			font-size: 1.2em;
-			line-height: 1.2em;
+			&:before {
+				@include set-icon-font;
+			}
+			&:after {
+				@include set-icon-font;
+			}
 		}
 	}
 }
@@ -70,114 +51,60 @@ footer {
 	display: block;
 	text-align: center;
 }
-
-@include at-breakpoint($small) {
-	//#left {
-	//	width: columns(12,12);
-	//}
-	//#branding {
-	//	img {
-	//		width: 100%;
-	//		max-width: 400px;
-	//		margin: 0 auto;
-	//	}
-	//}
-	#left {
-		width: columns(2,12);
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		z-index: 10;
-	}
-	#branding {
-		img { display: none; }
-	}
-	#main {
-		width: columns(10,12);
-		@include push(2);
-	}
-	footer {
-		width: columns(10,12);
-		@include push(2);
-	}
-}
-@include at-breakpoint($medium) {
+@include at-breakpoint($small-screens) {
 	#left {
 		width: columns(12,12);
+		background-color: $gold;
+		border-bottom: 5px solid #FFF;
+		margin-bottom: 10px;
 	}
 	#branding {
 		img {
 			width: 100%;
-			max-width: 450px;
+			max-width: 300px;
 			margin: 0 auto;
 		}
 	}
+	#site-navigation {
+		ul.menu {
+			@include susy-grid-background;
+			display: block;
+			max-width: 600px;
+			width: 90%;
+			min-width: 300px;
+			margin: 0 auto;
+			@include clearfix;
+		}
+		li {
+			@include span-columns(4,12);
+			display: block;
+			&:nth-child(-n+3) {
+				margin-bottom: 2px;
+			}
+			&:nth-child(3n) {
+				@include span-columns(4 omega, 12);
+			}
+		}
+		a {
+			display: block;
+			text-align: center;
+			font-weight: $demi;
+			color: $blue;
+			padding: 10px;
+			background-color: red;
+		}
+	}
 }
-@include at-breakpoint($norm) {
-	#left {
+@include at-breakpoint($big-screens) {
+		#left {
 		width: columns(3.5,12);
 		position: fixed;
 		top: 0;
 		bottom: 0;
 		z-index: 10;
-	}	
-	#branding {
-		img {
-			width: 100%;
-			max-width: 450px;
-			margin: 0 auto;
-		}
-	}
-	#main {
-		margin-left: columns(3.5,12);
-		padding-left: $gutter-width;
-	}
-	footer {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		width: columns(3.5,12);
-		padding: 10px;
-		height: auto;
-		z-index: 20;
-	}
-}
-@include at-breakpoint($large) {
-	#left {
-		width: columns(3.5,12);
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		z-index: 10;
-	}
-	#branding {
-		img {
-			width: 100%;
-			max-width: 450px;
-			margin: 0 auto;
-		}
-	}
-	#main {
-		margin-left: columns(3.5,12);
-		padding-left: $gutter-width;
-	}
-	footer {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		width: columns(3.5,12);
-		padding: 10px;
-		height: auto;
-		z-index: 20;
-	}
-}
-@include at-breakpoint($oversize) {
-	#left {
-		width: columns(3.5,12);
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		z-index: 10;
+		background-image: url('../img/shop-img-1.jpg');
+		background-repeat: no-repeat;
+		background-position: center 45%;
 	}
 	#branding {
 		img {
@@ -186,6 +113,68 @@ footer {
 			margin: 0 auto;
 		}
 	}
+	#site-navigation {
+		a {
+			display: block;
+			padding: 10px 15px;
+			font-family: $body-font;
+			color: #FFF;
+			text-align: center;
+		}
+		ul.menu {
+			text-align: center;
+		}
+		li {
+			
+		}
+		li:nth-child(1) {
+			display: block;
+			width: columns(8,12);
+			margin: 10px auto 40px;
+			a {
+				font-size: 2em;
+				line-height: 1.5em;
+				background-image: url('../img/white-low-opacity.png');
+				color: shade($purple, 5%);
+				font-family: $header-font;
+				letter-spacing: 0.0025em;
+				@include text-shadow(shade(#FFFFFF, 10%) 1px 1px 0);
+				position: relative;
+				-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1) inset;
+				-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1) inset;
+				box-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 0 20px rgba(0,0,0,0.1) inset;
+				&:hover {
+					background-image: none;
+					background-color: #fff;
+					color: $purple;
+					opacity: 0.8;
+					@include text-shadow(shade(#FFFFFF, 10%) 1px 1px 0);
+				}
+			}
+		}
+		li:nth-child(n+2) {
+			text-align: center;
+			display: inline-block;
+			margin-bottom: 10px;
+			margin-right: 10px;
+			a {
+				color: shade(#FFF, 1%);
+				font-size: 1.45em;
+				line-height: 1.2em;
+				letter-spacing: 0.05em;
+				font-weight: $heavy;
+				background-image: url('../img/black-low-opacity.png');
+				@include text-shadow(tint($fakeblack, 15%) 0px 0px 3px);
+				&:hover {
+					opacity: 0.8;
+					background-image: none;
+					background-color: $fakeblack;
+					color: #FFF;
+					@include text-shadow(#000 0px 0px 3px);
+				}
+			}
+		}
+	}
 	#main {
 		margin-left: columns(3.5,12);
 		padding-left: $gutter-width;
@@ -199,4 +188,64 @@ footer {
 		height: auto;
 		z-index: 20;
 	}
+}
+@include at-breakpoint($small) {
+	#site-navigation {
+		li {
+			display: block;
+		}
+		li:nth-child(1) {
+			a {
+				display: block;
+				overflow: hidden;
+				text-indent: 100%;
+				white-space: nowrap;
+				color: transparent;
+			}
+			a:after {
+				@include set-icon-font;
+				display: block;
+				content: $basket;
+				text-indent: 0;
+				font-size: 32px;
+				line-height: 32px;
+				color: $fakeblack;
+				text-align: center;
+			}
+		}
+	}
+}
+@include at-breakpoint($medium) {
+
+}
+@include at-breakpoint($norm) {
+	#site-navigation {
+		li:nth-child(1) {
+			a {
+				font-size: 1.5em;
+			}
+		}
+		li:nth-child(n+2) {
+			a {
+				font-size: 1.25em;
+			}
+		}
+	}
+}
+@include at-breakpoint($large) {
+	#site-navigation {
+		li:nth-child(1) {
+			a {
+				font-size: 1.7em;
+			}
+		}
+		li:nth-child(n+2) {
+			a {
+				font-size: 1.35em;
+			}
+		}
+	}
+}
+@include at-breakpoint($oversize) {
+
 }

@@ -35,6 +35,8 @@ body {
 
 .element-invisible { display: none; }
 
+.homepage-textfield { display: none; }
+
 // ---------------------------------------------------------------------------
 // COLORS 
 
@@ -51,10 +53,13 @@ $fakeblack : #231F20;
 // BREAKPOINTS & TWEAKPOINTS
 
 $small		: 0px 12 650px;
-$medium		: 650px 12 960px;
-$norm		  : 960px 12 1024px;
-$large		: 1024px 12 1280px;
-$oversize	: 1280px 12;
+$medium		: 651px 12 960px;
+$norm		  : 961px 12 1024px;
+$large		: 1025px 12 1280px;
+$oversize	: 1281px 12;
+
+$small-screens  : 0px 12 960px;
+$big-screens    : 961px 12;
 
 // ---------------------------------------------------------------------------
 // FOR SCREEN READERS
