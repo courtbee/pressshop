@@ -7,7 +7,7 @@
 	<?php endif; ?>
 <?php endif; ?>
 
-<div id="page" class="<?php print $sectionName; ?>">
+<div id="page"<?php if($tabs = render($tabs)): ?>class="tabs-true"<?php endif; ?>>
 	<?php if($page['sidebar_first']): ?>
 		<div id="left">
 			<?php print render($page['sidebar_first']); ?>
@@ -28,7 +28,7 @@
 			</div>
 		<?php endif; ?>
 		<?php if ($title): ?>
-			<h1><?php print $title; ?></h1>
+			<h1 class="page-title"><?php print $title; ?></h1>
 		<?php endif; ?>
 
 		<?php print render($page['content_pre']); ?>
@@ -36,7 +36,7 @@
 		<?php print render($page['content_post']); ?>
 
 		<?php if ($page['content_footer']): ?>
-			<?php print render($page['content_footer']); ?>
+			<div class="content-footer"><?php print render($page['content_footer']); ?></div>
 		<?php endif; ?>
 
 		<?php if ($page['comment_section']): ?>

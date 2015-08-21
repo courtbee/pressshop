@@ -25,6 +25,12 @@ body {
 #left {
 	opacity: 0.8;
 	//@include susy-grid-background;
+	.social-media {
+		img {
+			width: 32px;
+			height: 32px;
+		}
+	}
 }
 
 #branding {

@@ -1,3 +1,19 @@
+.section {
+	//h1.page-title { display: none; }
+}
+
+.content-footer {
+	a {
+		text-transform: capitalize;
+	}
+}
+
+#blog-tags {
+	a {
+		text-transform: capitalize;
+	}
+}
+
 @include at-breakpoint($small) {
 
 }
